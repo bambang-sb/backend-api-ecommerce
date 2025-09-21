@@ -558,3 +558,118 @@
 {"level":"info","message":"Params: [69,1,0]"}
 {"level":"info","message":"Params: []"}
 {"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"bambang\",\"$2b$10$mia9T9r55m1FNjrJyXtAJuW2aG9ohRGBByy3zU/wR6XbOLXcFUByS\",\"CUSTOMER\",\"2025-09-21 13:49:44.492 UTC\",\"2025-09-21 13:49:44.492 UTC\"]"}
+{"level":"info","message":"Params: [70,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.findUnique()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/apps/models/user-model.js:17:29\n\n  14 }\n  15 \n  16 const findUsername = async({username})=>{\n→ 17   return prismaClient.users.findUnique({\n         where: {\n           username: undefined,\n       ?   id_user?: Int,\n       ?   AND?: UsersWhereInput | UsersWhereInput[],\n       ?   OR?: UsersWhereInput[],\n       ?   NOT?: UsersWhereInput | UsersWhereInput[],\n       ?   email?: StringNullableFilter | String | Null,\n       ?   password?: StringFilter | String,\n       ?   token?: StringNullableFilter | String | Null,\n       ?   full_name?: StringNullableFilter | String | Null,\n       ?   phone?: StringNullableFilter | String | Null,\n       ?   address?: StringNullableFilter | String | Null,\n       ?   role?: EnumRoleFilter | Role,\n       ?   created_at?: DateTimeFilter | DateTime,\n       ?   updated_at?: DateTimeNullableFilter | DateTime | Null\n         }\n       })\n\nArgument `where` of type UsersWhereUniqueInput needs at least one of `id_user` or `username` arguments. Available options are marked with ?."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambange\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambange\",1,0]"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: [\"9516e733-9336-4762-ac85-2445148738cc\",\"2025-09-21 13:57:04.839 UTC\",70,\"bambang\"]"}
+{"level":"info","message":"Params: [70,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",\"2025-09-21 14:24:35.502 UTC\",70,\"bambang\"]"}
+{"level":"info","message":"Params: [70,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"token\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.findUnique()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/apps/models/user-model.js:17:29\n\n  14 }\n  15 \n  16 const findUsername = async({username})=>{\n→ 17   return prismaClient.users.findUnique({\n         where: {\n           username: {\n             username: \"bambang\"\n           }\n           ~~~~~~~~~~~~~~~~~~~~~\n         }\n       })\n\nArgument `username`: Invalid value provided. Expected String, provided Object."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: [null,\"2025-09-21 14:46:41.418 UTC\",70,\"bambang\"]"}
+{"level":"info","message":"Params: [70,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"c774cbb9-9e53-432e-87ab-22b07be353ad\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"token\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
