@@ -1,0 +1,560 @@
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.findUnique()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/apps/models/user-model.js:16:29\n\n  13   \n  14 }\n  15 const findUsername = async({username})=>{\n→ 16   return prismaClient.users.findUnique({\n         where: {\n           username: \"bambang\",\n       ?   id_user?: Int,\n       ?   AND?: UsersWhereInput | UsersWhereInput[],\n       ?   OR?: UsersWhereInput[],\n       ?   NOT?: UsersWhereInput | UsersWhereInput[],\n       ?   email?: StringFilter | String,\n       ?   password?: StringFilter | String,\n       ?   token?: StringNullableFilter | String | Null,\n       ?   full_name?: StringNullableFilter | String | Null,\n       ?   phone?: StringNullableFilter | String | Null,\n       ?   address?: StringFilter | String,\n       ?   role?: EnumRoleFilter | Role,\n       ?   created_at?: DateTimeFilter | DateTime,\n       ?   updated_at?: DateTimeFilter | DateTime\n         }\n       })\n\nArgument `where` of type UsersWhereUniqueInput needs at least one of `id_user` arguments. Available options are marked with ?."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Query: SELECT `ecommerce`.`users`.`id_user`, `ecommerce`.`users`.`username`, `ecommerce`.`users`.`email`, `ecommerce`.`users`.`password`, `ecommerce`.`users`.`token`, `ecommerce`.`users`.`full_name`, `ecommerce`.`users`.`phone`, `ecommerce`.`users`.`address`, `ecommerce`.`users`.`role`, `ecommerce`.`users`.`created_at`, `ecommerce`.`users`.`updated_at` FROM `ecommerce`.`users` WHERE (`ecommerce`.`users`.`username` = ? AND 1=1) LIMIT ? OFFSET ?"}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Duration: 5ms"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Duration: 5ms"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [object Object]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/apps/models/user-model.js:7:29\n\n  4 const register = async(request)=>{\n  5   request.password = await bcrypt.hash(request.password, 10)\n  6 \n→ 7   return prismaClient.users.create({\n        data: {\n          password: \"$2b$10$.xrdfIfC/KAhg88zZI..oeKzahffWWzIA/sXuc9ONdbZQ4xh3e0Xm\",\n      +   username: String\n        }\n      })\n\nArgument `username` is missing."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"bambang\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"bambang\",\"$2b$10$kf61EUP9uwzs8f48Lb457ebIfy3PIBjswwuH16.GE2kARNmKTi4uu\",\"CUSTOMER\",\"2025-09-20 17:02:40.126 UTC\",\"2025-09-20 17:02:40.126 UTC\"]"}
+{"level":"info","message":"Params: [2,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$EnHvEOB4TRFSteefWPuT4eCFCzy8n16CfbVQwAHCAZXgJZcVBf7pS\",\"CUSTOMER\",\"2025-09-21 01:43:26.934 UTC\",\"2025-09-21 01:43:26.934 UTC\"]"}
+{"level":"info","message":"Params: [3,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$ElXZa18fRqu6QcDNCRgrF.pId2f5gDs2yU3VXxDjNBTlkKXjF9XiO\",\"CUSTOMER\",\"2025-09-21 01:49:56.775 UTC\",\"2025-09-21 01:49:56.775 UTC\"]"}
+{"level":"info","message":"Params: [4,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$iis4a.pDiYAVO.CnUy2QE.FE9S39mv2GuCIwHwdiBA0dF0g56zGF2\",\"CUSTOMER\",\"2025-09-21 01:57:16.550 UTC\",\"2025-09-21 01:57:16.550 UTC\"]"}
+{"level":"info","message":"Params: [5,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$ojPHqSyG7M0QiHlDESaZbewOSmjF4fwvuA7DsQyn/GXCuyPL28ECW\",\"CUSTOMER\",\"2025-09-21 02:00:14.041 UTC\",\"2025-09-21 02:00:14.041 UTC\"]"}
+{"level":"info","message":"Params: [6,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$gM5cG3KplIVIhKqllq.lneeaVaOveh3dZCsA9/wPA.T/1/CwEHoOi\",\"CUSTOMER\",\"2025-09-21 02:02:06.235 UTC\",\"2025-09-21 02:02:06.235 UTC\"]"}
+{"level":"info","message":"Params: [7,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$xvgxgQE1THStNR6LLbjbYOEUwYvJV/YblQb822fW8amrNSGfOFyjm\",\"CUSTOMER\",\"2025-09-21 02:02:45.283 UTC\",\"2025-09-21 02:02:45.283 UTC\"]"}
+{"level":"info","message":"Params: [8,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$LoC.VztyGgSLegQzmK1.uOUQ0W7q837bAAhg0GdSgtbRc5EdrCQ82\",\"CUSTOMER\",\"2025-09-21 02:08:21.839 UTC\",\"2025-09-21 02:08:21.839 UTC\"]"}
+{"level":"info","message":"Params: [9,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"test\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"test\",\"$2b$10$JIkH3suvsCFA0BrL0QyjreJn3aUPhtgS7da2pY/dQfX.ypcVLQyZa\",\"CUSTOMER\",\"2025-09-21 02:09:42.053 UTC\",\"2025-09-21 02:09:42.053 UTC\"]"}
+{"level":"info","message":"Params: [10,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"test\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$9QySYppPc14fcnxQyBjKluWtvlENkB8Rlhtp3LTcky66EWDRTEmwy\",\"CUSTOMER\",\"2025-09-21 02:47:00.984 UTC\",\"2025-09-21 02:47:00.984 UTC\"]"}
+{"level":"info","message":"Params: [11,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:47:01.032 UTC\",\"2025-09-21 02:47:01.032 UTC\"]"}
+{"level":"info","message":"Params: [12,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$nmQ1w2ZXGVeLHRY5oLCQPOwlWqY0SDpPRwFlPwZdbeAgP75VXtIx6\",\"CUSTOMER\",\"2025-09-21 02:48:36.041 UTC\",\"2025-09-21 02:48:36.041 UTC\"]"}
+{"level":"info","message":"Params: [13,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:48:36.091 UTC\",\"2025-09-21 02:48:36.091 UTC\"]"}
+{"level":"info","message":"Params: [14,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"\",\"\",\"CUSTOMER\",\"2025-09-21 02:48:36.131 UTC\",\"2025-09-21 02:48:36.131 UTC\"]"}
+{"level":"info","message":"Params: [15,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$zvSdf9g/9Zg8Vq6siLzL6.xDRTqkUpunYI/q0pAsowdYLyuhIw58m\",\"CUSTOMER\",\"2025-09-21 02:48:36.262 UTC\",\"2025-09-21 02:48:36.262 UTC\"]"}
+{"level":"info","message":"Params: [16,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$ji54PetFro6HnkjBYObVw.3Vq9wyq14/vbVJqe65W5pAL911PL/A2\",\"CUSTOMER\",\"2025-09-21 02:49:13.883 UTC\",\"2025-09-21 02:49:13.883 UTC\"]"}
+{"level":"info","message":"Params: [17,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:49:13.928 UTC\",\"2025-09-21 02:49:13.928 UTC\"]"}
+{"level":"info","message":"Params: [18,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"\",\"\",\"CUSTOMER\",\"2025-09-21 02:49:13.982 UTC\",\"2025-09-21 02:49:13.982 UTC\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/test/users.test.js:91:30\n\n  88 \n  89 it('should return 400 if validation fails', async () => {\n  90   // Buat user terlebih dahulu\n→ 91   await prismaClient.users.create(\nUnique constraint failed on the constraint: `users_username_key`"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$bu02uCVk0oJlTq5ES.5yi.mj8dqkWAPcttx9E22jnB1p2Y/Oq8CBK\",\"CUSTOMER\",\"2025-09-21 02:50:17.763 UTC\",\"2025-09-21 02:50:17.763 UTC\"]"}
+{"level":"info","message":"Params: [20,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:50:17.849 UTC\",\"2025-09-21 02:50:17.849 UTC\"]"}
+{"level":"info","message":"Params: [21,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/test/users.test.js:91:30\n\n  88 \n  89 it('should return 400 if validation fails', async () => {\n  90   // Buat user terlebih dahulu\n→ 91   await prismaClient.users.create({\n         username: \"testuser\",\n         ~~~~~~~~\n         password: \"testpass\",\n       ? data?: UsersCreateInput | UsersUncheckedCreateInput\n       })\n\nUnknown argument `username`. Available options are marked with ?."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$qIA2kNudShWTd4FBasFqhuo3qD7LD.RHSFoiZrQrAHtowNjEu0ggW\",\"CUSTOMER\",\"2025-09-21 02:52:18.571 UTC\",\"2025-09-21 02:52:18.571 UTC\"]"}
+{"level":"info","message":"Params: [22,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:52:18.616 UTC\",\"2025-09-21 02:52:18.616 UTC\"]"}
+{"level":"info","message":"Params: [23,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/test/users.test.js:91:30\n\n  88 \n  89 it('should return 400 if validation fails', async () => {\n  90   // Buat user terlebih dahulu\n→ 91   await prismaClient.users.create({\n         username: \"testuser\",\n         ~~~~~~~~\n         password: \"testpass\",\n       ? data?: UsersCreateInput | UsersUncheckedCreateInput\n       })\n\nUnknown argument `username`. Available options are marked with ?."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$uSBkRn7jr4MvWpS9UrfNWel43jZHwqgrhII0kCr1ifeQIjM4NS25q\",\"CUSTOMER\",\"2025-09-21 02:52:45.350 UTC\",\"2025-09-21 02:52:45.350 UTC\"]"}
+{"level":"info","message":"Params: [24,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:52:45.406 UTC\",\"2025-09-21 02:52:45.406 UTC\"]"}
+{"level":"info","message":"Params: [25,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:52:45.484 UTC\",\"2025-09-21 02:52:45.484 UTC\"]"}
+{"level":"info","message":"Params: [26,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$AZ3e.IP65y5UsuC1Xl01Ye076uBqbh4F20Ti6eGSHGzmCvTx.ZRlK\",\"CUSTOMER\",\"2025-09-21 02:53:25.037 UTC\",\"2025-09-21 02:53:25.037 UTC\"]"}
+{"level":"info","message":"Params: [27,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:53:25.077 UTC\",\"2025-09-21 02:53:25.077 UTC\"]"}
+{"level":"info","message":"Params: [28,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:53:25.120 UTC\",\"2025-09-21 02:53:25.120 UTC\"]"}
+{"level":"info","message":"Params: [29,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$CkzMWttqbwqsLkYe96aJO.erSwFhAREg/cggykNU7nQyMBAnzdWHe\",\"CUSTOMER\",\"2025-09-21 02:53:37.755 UTC\",\"2025-09-21 02:53:37.755 UTC\"]"}
+{"level":"info","message":"Params: [30,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:53:37.801 UTC\",\"2025-09-21 02:53:37.801 UTC\"]"}
+{"level":"info","message":"Params: [31,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:53:37.858 UTC\",\"2025-09-21 02:53:37.858 UTC\"]"}
+{"level":"info","message":"Params: [32,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$TsuJ2aJQdutjYCKNWIEODeQ5JFFtSBEadm.MFf2pvCiGCo8MVMZ7q\",\"CUSTOMER\",\"2025-09-21 02:54:00.278 UTC\",\"2025-09-21 02:54:00.278 UTC\"]"}
+{"level":"info","message":"Params: [33,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:54:00.359 UTC\",\"2025-09-21 02:54:00.359 UTC\"]"}
+{"level":"info","message":"Params: [34,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:54:00.419 UTC\",\"2025-09-21 02:54:00.419 UTC\"]"}
+{"level":"info","message":"Params: [35,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$qUhRqU0MaWOhdBwZLeKkke4bpNX5KI1/PsnxfxH0r5SHquZ732eV2\",\"CUSTOMER\",\"2025-09-21 02:57:37.234 UTC\",\"2025-09-21 02:57:37.234 UTC\"]"}
+{"level":"info","message":"Params: [36,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:57:37.276 UTC\",\"2025-09-21 02:57:37.276 UTC\"]"}
+{"level":"info","message":"Params: [37,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:57:37.321 UTC\",\"2025-09-21 02:57:37.321 UTC\"]"}
+{"level":"info","message":"Params: [38,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$n6l2Zk32VQBdgdJTufMgy.VxzsmFjmrD5UiK/is.qrA/jwhtwZytW\",\"CUSTOMER\",\"2025-09-21 02:58:01.256 UTC\",\"2025-09-21 02:58:01.256 UTC\"]"}
+{"level":"info","message":"Params: [39,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:58:01.307 UTC\",\"2025-09-21 02:58:01.307 UTC\"]"}
+{"level":"info","message":"Params: [40,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:58:01.348 UTC\",\"2025-09-21 02:58:01.348 UTC\"]"}
+{"level":"info","message":"Params: [41,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":{"duration":0,"params":"[\"testuser\"]","query":"DELETE FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`username` = ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.732Z"}}
+{"level":"info","message":{"duration":0,"params":"[\"testuser\",1,0]","query":"SELECT `ecommerce`.`users`.`id_user`, `ecommerce`.`users`.`username`, `ecommerce`.`users`.`email`, `ecommerce`.`users`.`password`, `ecommerce`.`users`.`token`, `ecommerce`.`users`.`full_name`, `ecommerce`.`users`.`phone`, `ecommerce`.`users`.`address`, `ecommerce`.`users`.`role`, `ecommerce`.`users`.`created_at`, `ecommerce`.`users`.`updated_at` FROM `ecommerce`.`users` WHERE (`ecommerce`.`users`.`username` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.791Z"}}
+{"level":"info","message":{"duration":0,"params":"[]","query":"BEGIN","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.916Z"}}
+{"level":"info","message":{"duration":0,"params":"[null,\"testuser\",\"$2b$10$S28QE12IBTG4iulmJmf45ejIINXcQrav2HeLyTyVf4BBIeUjuq/Ru\",\"CUSTOMER\",\"2025-09-21 02:59:25.916 UTC\",\"2025-09-21 02:59:25.916 UTC\"]","query":"INSERT INTO `ecommerce`.`users` (`id_user`,`username`,`password`,`role`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?)","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.918Z"}}
+{"level":"info","message":{"duration":1,"params":"[42,1,0]","query":"SELECT `ecommerce`.`users`.`id_user`, `ecommerce`.`users`.`username`, `ecommerce`.`users`.`email`, `ecommerce`.`users`.`password`, `ecommerce`.`users`.`token`, `ecommerce`.`users`.`full_name`, `ecommerce`.`users`.`phone`, `ecommerce`.`users`.`address`, `ecommerce`.`users`.`role`, `ecommerce`.`users`.`created_at`, `ecommerce`.`users`.`updated_at` FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`id_user` = ? LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.919Z"}}
+{"level":"info","message":{"duration":2,"params":"[]","query":"COMMIT","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.926Z"}}
+{"level":"info","message":{"duration":4,"params":"[\"testuser\"]","query":"DELETE FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`username` = ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.959Z"}}
+{"level":"info","message":{"duration":0,"params":"[]","query":"BEGIN","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.961Z"}}
+{"level":"info","message":{"duration":0,"params":"[null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:59:25.961 UTC\",\"2025-09-21 02:59:25.961 UTC\"]","query":"INSERT INTO `ecommerce`.`users` (`id_user`,`username`,`password`,`role`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?)","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.963Z"}}
+{"level":"info","message":{"duration":0,"params":"[43,1,0]","query":"SELECT `ecommerce`.`users`.`id_user`, `ecommerce`.`users`.`username`, `ecommerce`.`users`.`email`, `ecommerce`.`users`.`password`, `ecommerce`.`users`.`token`, `ecommerce`.`users`.`full_name`, `ecommerce`.`users`.`phone`, `ecommerce`.`users`.`address`, `ecommerce`.`users`.`role`, `ecommerce`.`users`.`created_at`, `ecommerce`.`users`.`updated_at` FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`id_user` = ? LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.964Z"}}
+{"level":"info","message":{"duration":5,"params":"[]","query":"COMMIT","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.969Z"}}
+{"level":"info","message":{"duration":0,"params":"[\"testuser\",1,0]","query":"SELECT `ecommerce`.`users`.`id_user`, `ecommerce`.`users`.`username`, `ecommerce`.`users`.`email`, `ecommerce`.`users`.`password`, `ecommerce`.`users`.`token`, `ecommerce`.`users`.`full_name`, `ecommerce`.`users`.`phone`, `ecommerce`.`users`.`address`, `ecommerce`.`users`.`role`, `ecommerce`.`users`.`created_at`, `ecommerce`.`users`.`updated_at` FROM `ecommerce`.`users` WHERE (`ecommerce`.`users`.`username` = ? AND 1=1) LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.977Z"}}
+{"level":"info","message":{"duration":2,"params":"[\"testuser\"]","query":"DELETE FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`username` = ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:25.994Z"}}
+{"level":"info","message":{"duration":0,"params":"[]","query":"BEGIN","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:26.002Z"}}
+{"level":"info","message":{"duration":1,"params":"[null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 02:59:26.001 UTC\",\"2025-09-21 02:59:26.001 UTC\"]","query":"INSERT INTO `ecommerce`.`users` (`id_user`,`username`,`password`,`role`,`created_at`,`updated_at`) VALUES (?,?,?,?,?,?)","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:26.009Z"}}
+{"level":"info","message":{"duration":0,"params":"[44,1,0]","query":"SELECT `ecommerce`.`users`.`id_user`, `ecommerce`.`users`.`username`, `ecommerce`.`users`.`email`, `ecommerce`.`users`.`password`, `ecommerce`.`users`.`token`, `ecommerce`.`users`.`full_name`, `ecommerce`.`users`.`phone`, `ecommerce`.`users`.`address`, `ecommerce`.`users`.`role`, `ecommerce`.`users`.`created_at`, `ecommerce`.`users`.`updated_at` FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`id_user` = ? LIMIT ? OFFSET ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:26.011Z"}}
+{"level":"info","message":{"duration":2,"params":"[]","query":"COMMIT","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:26.011Z"}}
+{"level":"info","message":{"duration":2,"params":"[\"testuser\"]","query":"DELETE FROM `ecommerce`.`users` WHERE `ecommerce`.`users`.`username` = ?","target":"quaint::connector::metrics","timestamp":"2025-09-21T02:59:26.036Z"}}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"Params: undefined"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$CKwCA78QKWcWX7CWuCT.aeAcgLPzNl6EzSlpydOdOBorKFRDWlD6G\",\"CUSTOMER\",\"2025-09-21 03:00:03.016 UTC\",\"2025-09-21 03:00:03.016 UTC\"]"}
+{"level":"info","message":"Params: [48,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:00:03.058 UTC\",\"2025-09-21 03:00:03.058 UTC\"]"}
+{"level":"info","message":"Params: [49,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:00:03.097 UTC\",\"2025-09-21 03:00:03.097 UTC\"]"}
+{"level":"info","message":"Params: [50,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$Ya4xsTbppEVt8s6OLDc/su1sU5WpzuOkUZJd3hE6Ux5/utmOG97P.\",\"CUSTOMER\",\"2025-09-21 03:02:41.703 UTC\",\"2025-09-21 03:02:41.703 UTC\"]"}
+{"level":"info","message":"Params: [51,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:02:41.746 UTC\",\"2025-09-21 03:02:41.746 UTC\"]"}
+{"level":"info","message":"Params: [52,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:02:41.787 UTC\",\"2025-09-21 03:02:41.787 UTC\"]"}
+{"level":"info","message":"Params: [53,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$VtVpQLiZ09bEQc59olJ70eQO9A2HkhlM3jBD/UP93G6DQgdUB4pKG\",\"CUSTOMER\",\"2025-09-21 03:06:07.094 UTC\",\"2025-09-21 03:06:07.094 UTC\"]"}
+{"level":"info","message":"Params: [54,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$SeNwmD4B1.V3M9x6RCnVL.jotDoG7FVQoR3I7GTyTm5yT1gO43lPa\",\"CUSTOMER\",\"2025-09-21 03:06:49.972 UTC\",\"2025-09-21 03:06:49.972 UTC\"]"}
+{"level":"info","message":"Params: [55,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$zC8.FFML5XFpKP79MyjWf.wV/B1ShTFw30MPMwed0nYpckp6pflCm\",\"CUSTOMER\",\"2025-09-21 03:07:50.455 UTC\",\"2025-09-21 03:07:50.455 UTC\"]"}
+{"level":"info","message":"Params: [56,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:07:50.500 UTC\",\"2025-09-21 03:07:50.500 UTC\"]"}
+{"level":"info","message":"Params: [57,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$K6B/xtrqUhQxvFv1x/pLleTEg5kfnEiT53TkeyzMTwZYAm8FnMXc2\",\"CUSTOMER\",\"2025-09-21 03:08:17.656 UTC\",\"2025-09-21 03:08:17.656 UTC\"]"}
+{"level":"info","message":"Params: [58,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:08:17.696 UTC\",\"2025-09-21 03:08:17.696 UTC\"]"}
+{"level":"info","message":"Params: [59,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:08:17.741 UTC\",\"2025-09-21 03:08:17.741 UTC\"]"}
+{"level":"info","message":"Params: [60,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$20BPMok6TB2xjm0nMn/ol.OpZG5W70xOdVQhC0ABTK0HOdCqaWtAa\",\"CUSTOMER\",\"2025-09-21 03:08:42.083 UTC\",\"2025-09-21 03:08:42.083 UTC\"]"}
+{"level":"info","message":"Params: [61,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:08:42.116 UTC\",\"2025-09-21 03:08:42.116 UTC\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/test/users.test.js:33:30\n\n  30 \n  31 it('should return 400 if user already exists', async () => {\n  32   // Buat user terlebih dahulu\n→ 33   await prismaClient.users.create(\nUnique constraint failed on the constraint: `users_username_key`"}
+{"level":"error","message":"Error: \nInvalid `prismaClient.users.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/test/users.test.js:45:30\n\n  42 \n  43 it('should return 400 if validation fails', async () => {\n  44   // Buat user terlebih dahulu\n→ 45   await prismaClient.users.create(\nUnique constraint failed on the constraint: `users_username_key`"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:08:42.337 UTC\",\"2025-09-21 03:08:42.337 UTC\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$4EJfC3sBMKllmBuJsjkBeOVlEdP2bjF4.kfTi0zYxggXXvshuCD7G\",\"CUSTOMER\",\"2025-09-21 03:09:23.919 UTC\",\"2025-09-21 03:09:23.919 UTC\"]"}
+{"level":"info","message":"Params: [64,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:09:23.969 UTC\",\"2025-09-21 03:09:23.969 UTC\"]"}
+{"level":"info","message":"Params: [65,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 03:09:24.006 UTC\",\"2025-09-21 03:09:24.006 UTC\"]"}
+{"level":"info","message":"Params: [66,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"info: Starting a mysql pool with 5 connections."}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"$2b$10$nH0X2mAlo/uJ97d9IJeHbekwooLlgTaiHWniX3dWcDiq2s/mrfuOG\",\"CUSTOMER\",\"2025-09-21 13:07:23.264 UTC\",\"2025-09-21 13:07:23.264 UTC\"]"}
+{"level":"info","message":"Params: [67,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 13:07:23.302 UTC\",\"2025-09-21 13:07:23.302 UTC\"]"}
+{"level":"info","message":"Params: [68,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\",1,0]"}
+{"level":"info","message":"Params: [\"testuser\"]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [null,\"testuser\",\"testpass\",\"CUSTOMER\",\"2025-09-21 13:07:23.344 UTC\",\"2025-09-21 13:07:23.344 UTC\"]"}
+{"level":"info","message":"Params: [69,1,0]"}
+{"level":"info","message":"Params: []"}
+{"level":"info","message":"Params: [\"testuser\"]"}
