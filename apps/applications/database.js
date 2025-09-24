@@ -16,12 +16,12 @@ prisma.$on("error", (e)=>{
 })
 
 prisma.$on("query", (e)=>{
-  logger.info("Params: "+e.params)
+  // logger.info("Params: "+e.params)
 })
 
 
 prisma.$on("info", (e)=>{
-  logger.info("info: "+e.message)
+  // logger.info("info: "+e.message)
 })
 
 prisma.$on("warn", (e)=>{

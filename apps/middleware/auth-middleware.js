@@ -1,5 +1,5 @@
 const prisma = require("../applications/database");
-require('dotenv').config()
+// require('dotenv').config()
 
 const authMiddleware = async (req, res, next) => {
   if (!req.headers.authorization) {

@@ -1,5 +1,5 @@
 const web = require('./applications/web');
-require('dotenv').config();
+require('dotenv').config({quiet:true});
 const port = process.env.PORT || 3000;
 const logger = require("./applications/logging")
 

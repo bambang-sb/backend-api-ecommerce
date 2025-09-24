@@ -1,11 +1,19 @@
 const winston = require('winston');
 
+
+let fileNameError = "apps/logs/error.log";
+let fileNameCombined = "apps/logs/combined.log";
+if (process.env.NODE_ENV === 'production') {
+  fileNameError = "logs/error.log";
+  fileNameCombined = "logs/combined.log";
+}
+
 const logger = winston.createLogger({
   level: 'info',
   format: winston.format.json(),
   transports: [
-    new winston.transports.File({ filename: 'apps/logs/error.log', level: 'error' }),
-    new winston.transports.File({ filename: 'apps/logs/combined.log' })
+    new winston.transports.File({ filename: fileNameError, level: 'error' }),
+    new winston.transports.File({ filename: fileNameCombined }),
   ],
 });
 
