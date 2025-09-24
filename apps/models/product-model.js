@@ -6,7 +6,8 @@ const create =async (request)=>{
       name: request.name,
       price: request.price,
       description: request.description,
-      categori_id: request.category
+      categori_id: request.category,
+      brand_id: request.brand
     }
   })  
 }
@@ -32,7 +33,8 @@ const update =async (request)=>{
       name: request.name,
       price: request.price,
       description: request.description,
-      categori_id: request.category
+      categori_id: request.category,
+      brand_id: request.brand
     }
   })
 }

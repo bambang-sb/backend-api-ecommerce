@@ -12,7 +12,7 @@ const read = asyncHandler(async (req, res) => {
 });
 
 const readId = asyncHandler(async (req, res) => {
-  let categori = validate(categoriIdValidation, req.params);
+  let categori = validate(categoriIdValidation, {id:req.params.id});
   
   let category = await Category.readId(categori.id);
   res.status(200).json({data:category});
@@ -32,12 +32,14 @@ const create = asyncHandler(async (req, res) => {
 
 const update = asyncHandler(async (req, res) => {
   let categori = validate(categoryCreateUpdateValidation, req.body);
-  let categoriId = validate(categoriIdValidation, req.params);
+  let categoriId = validate(categoriIdValidation, {id:req.params.id});
+
   let request = {
     id_categori: categoriId.id,
     name: categori.name,
     description: categori.description
   };
+
   let category = await Category.update(request);
   res.status(200).json({data:category, message:"Category updated successfully"});
 });

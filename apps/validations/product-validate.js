@@ -22,6 +22,11 @@ const ProductCreateUpdateValidation = Joi.object({
     'string.empty': 'Category cannot be empty',
     'number.base': 'Category must be a number',
   }),
+  brand: Joi.number().required().messages({
+    'any.required': 'Brand is required',
+    'string.empty': 'Brand cannot be empty',
+    'number.base': 'Brand must be a number',
+  }),
 });
 
 const ProductIdValidation = Joi.object({

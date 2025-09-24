@@ -12,7 +12,7 @@ const read = asyncHandler(async (req, res) => {
 });
 
 const readId = asyncHandler(async (req, res) => {
-  let product = validate(ProductIdValidation, req.params);
+  let product = validate(ProductIdValidation, {id:req.params.id});
   
   let products = await Product.readId(product.id);
   res.status(200).json({data:products});
@@ -25,7 +25,8 @@ const create = asyncHandler(async (req, res) => {
     name: product.name,
     price: product.price,
     description: product.description,
-    category: product.category
+    category: product.category,
+    brand: product.brand
   };
 
   await Product.create(request);
@@ -34,13 +35,14 @@ const create = asyncHandler(async (req, res) => {
 
 const update = asyncHandler(async (req, res) => {
   let product = validate(ProductCreateUpdateValidation, req.body);
-  let productId = validate(ProductIdValidation, req.params);
+  let productId = validate(ProductIdValidation, {id:req.params.id});
   let request = {
     id_product: productId.id,
     name: product.name,
     price: product.price,
     description: product.description,
-    category: product.category
+    category: product.category,
+    brand: product.brand
   };
   let products = await Product.update(request);
   res.status(200).json({data:products, message:"Product updated successfully"});
