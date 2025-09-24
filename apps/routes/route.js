@@ -1,6 +1,7 @@
 const r = require('express').Router();
 const users = require('../controllers/user-controller');
 const categories = require('../controllers/categori-controller');
+const products = require('../controllers/product-controller');
 const authMiddleware = require('../middleware/auth-middleware');
 
 //users
@@ -16,6 +17,12 @@ r.get('/categories',categories.read)
 r.get('/categories/:id',categories.readId)
 r.post('/categories',categories.create)
 r.put('/categories/:id',categories.update)
+
+//products
+r.get('/products',products.read)
+r.get('/products/:id',products.readId)
+r.post('/products',products.create)
+r.put('/products/:id',products.update)
 
 r.get('/test', (req, res) => {
   res.json('API is running....');
