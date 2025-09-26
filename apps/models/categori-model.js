@@ -6,23 +6,26 @@ const create =async (request)=>{
       name: request.name,
       description: request.description
     }
-  })  
+  })
+  return null;
 }
 
 const read =async (request)=>{
-  return await prismaClient.categories.findMany()
+  let res = await prismaClient.categories.findMany()
+  return res;
 }
 
 const readId =async (id)=>{
-  return await prismaClient.categories.findFirst({
+  let res = await prismaClient.categories.findFirst({
     where:{
       id_categori:id
     }
   })
+  return res;
 }
 
 const update =async (request)=>{
-  return await prismaClient.categories.update({
+  let res= await prismaClient.categories.update({
     where:{
       id_categori:request.id_categori
     },
@@ -31,11 +34,34 @@ const update =async (request)=>{
       description: request.description
     }
   })
+  return res;
+}
+
+const findName = async(name)=>{
+  let res = await prismaClient.categories.count({
+    where:{
+      name:name
+    }
+  });
+  return res;
+}
+const findNameForUpdate = async(name,id)=>{
+  let res = await prismaClient.categories.count({
+    where:{
+      name:name,
+      NOT:{
+        id_categori:Number(id)
+      }
+    },
+  });
+  return res;
 }
 
 module.exports = {
   create,
   read,
   readId,
-  update
+  update,
+  findName,
+  findNameForUpdate
 }

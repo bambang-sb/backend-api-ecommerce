@@ -6,23 +6,46 @@ const create =async (request)=>{
       name: request.name,
       description: request.description
     }
-  })  
+  })
+  return null;
+}
+
+const findName = async(name)=>{
+  let res = await prismaClient.brands.count({
+    where:{
+      name:name
+    }
+  });
+  return res;
+}
+const findNameForUpdate = async(name,id)=>{
+  let res = await prismaClient.brands.count({
+    where:{
+      name:name,
+      NOT:{
+        id_brand:Number(id)
+      }
+    },
+  });
+  return res;
 }
 
 const read =async ()=>{
-  return await prismaClient.brands.findMany()
+  let res = await prismaClient.brands.findMany()
+  return res;
 }
 
 const readId =async (id)=>{
-  return await prismaClient.brands.findFirst({
+  let res = await prismaClient.brands.findFirst({
     where:{
       id_brand:id
     }
   })
+  return res;
 }
 
 const update =async (request)=>{
-  return await prismaClient.brands.update({
+  let res = await prismaClient.brands.update({
     where:{
       id_brand:request.id_brand
     },
@@ -31,11 +54,14 @@ const update =async (request)=>{
       description: request.description
     }
   })
+  return res;
 }
 
 module.exports = {
   create,
   read,
   readId,
-  update
+  update,
+  findName,
+  findNameForUpdate
 }

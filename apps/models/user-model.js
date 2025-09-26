@@ -5,20 +5,22 @@ const { v4 } = require('uuid')
 const register = async(request)=>{
   request.password = await bcrypt.hash(request.password, 10)
 
-  return prismaClient.users.create({
+  let res = await prismaClient.users.create({
     data:{
       username: request.username,
       password: request.password
     }
   })
+  return res;
 }
 
 const findUsername = async({username})=>{
-  return prismaClient.users.findUnique({
+  let res = prismaClient.users.findUnique({
     where:{
       username: username
     }
-  })
+  });
+  return res;
 }
 
 const login = async(request)=>{
@@ -31,9 +33,9 @@ const login = async(request)=>{
       token:token
     },
     select:{token:true}
-  })
+  });
 
-  return user
+  return user;
 }
 
 const logout = async(request)=>{
@@ -45,9 +47,9 @@ const logout = async(request)=>{
     data:{
       token:null
     }
-  })
+  });
 
-  return user
+  return user;
 }
 
 module.exports = {

@@ -1,51 +1,24 @@
 const asyncHandler = require("../helpers/asyncHandler");
-const Product = require("../models/product-model");
-const {
-  ProductCreateUpdateValidation,
-  ProductIdValidation
-} = require("../validations/product-validate");
-const validate = require("../validations/validate");
+const productService = require("../services/product-service");
 
 const read = asyncHandler(async (req, res) => {
-  let product = await Product.read();
+  let product = await productService.read();
   res.status(200).json({data:product});
 });
 
 const readId = asyncHandler(async (req, res) => {
-  let product = validate(ProductIdValidation, {id:req.params.id});
-  
-  let products = await Product.readId(product.id);
-  res.status(200).json({data:products});
+  let result = await productService.readId(req.params);
+  res.status(200).json({data:result});
 });
 
 const create = asyncHandler(async (req, res) => {
-  const product = validate(ProductCreateUpdateValidation, req.body);
-
-  let request = {
-    name: product.name,
-    price: product.price,
-    description: product.description,
-    category: product.category,
-    brand: product.brand
-  };
-
-  await Product.create(request);
+  await productService.create(req.body);
   res.status(201).json({message:"Product created successfully"});
 });
 
 const update = asyncHandler(async (req, res) => {
-  let product = validate(ProductCreateUpdateValidation, req.body);
-  let productId = validate(ProductIdValidation, {id:req.params.id});
-  let request = {
-    id_product: productId.id,
-    name: product.name,
-    price: product.price,
-    description: product.description,
-    category: product.category,
-    brand: product.brand
-  };
-  let products = await Product.update(request);
-  res.status(200).json({data:products, message:"Product updated successfully"});
+  await productService.update(req.body, req.params);
+  res.status(200).json({message:"Product updated successfully"});
 });
 
 module.exports = {

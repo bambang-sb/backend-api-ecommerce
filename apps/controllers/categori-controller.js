@@ -1,47 +1,24 @@
 const asyncHandler = require("../helpers/asyncHandler");
-const Category = require("../models/categori-model");
-const {
-  categoryCreateUpdateValidation,
-  categoriIdValidation
-} = require("../validations/categori-validate");
-const validate = require("../validations/validate");
+const categoriService = require("../services/categori-service");
 
 const read = asyncHandler(async (req, res) => {
-  let categories = await Category.read();
-  res.status(200).json({data:categories});
+  let result = await categoriService.read();
+  res.status(200).json({data:result});
 });
 
 const readId = asyncHandler(async (req, res) => {
-  let categori = validate(categoriIdValidation, {id:req.params.id});
-  
-  let category = await Category.readId(categori.id);
-  res.status(200).json({data:category});
+  let result = await categoriService.readId(req.params);
+  res.status(200).json({data:result});
 });
 
 const create = asyncHandler(async (req, res) => {
-  const categori = validate(categoryCreateUpdateValidation, req.body);
-
-  let request = {
-    name: categori.name,
-    description: categori.description
-  };
-
-  await Category.create(request);
+  await categoriService.create(req.body);
   res.status(201).json({message:"Category created successfully"});
 });
 
 const update = asyncHandler(async (req, res) => {
-  let categori = validate(categoryCreateUpdateValidation, req.body);
-  let categoriId = validate(categoriIdValidation, {id:req.params.id});
-
-  let request = {
-    id_categori: categoriId.id,
-    name: categori.name,
-    description: categori.description
-  };
-
-  let category = await Category.update(request);
-  res.status(200).json({data:category, message:"Category updated successfully"});
+  await categoriService.update(req.body, req.params);
+  res.status(200).json({message:"Category updated successfully"});
 });
 
 module.exports = {

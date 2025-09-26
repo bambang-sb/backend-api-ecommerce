@@ -1,7 +1,7 @@
 const prismaClient = require('../applications/database')
 
 const create =async (request)=>{
-  await prismaClient.products.create({
+  let res = await prismaClient.products.create({
     data:{
       name: request.name,
       price: request.price,
@@ -9,23 +9,26 @@ const create =async (request)=>{
       categori_id: request.category,
       brand_id: request.brand
     }
-  })  
+  })
+  return res;
 }
 
 const read =async ()=>{
-  return await prismaClient.products.findMany()
+  let res = await prismaClient.products.findMany();
+  return res;
 }
 
 const readId =async (id)=>{
-  return await prismaClient.products.findFirst({
+  let res = await prismaClient.products.findFirst({
     where:{
       id_product:id
     }
   })
+  return res;
 }
 
 const update =async (request)=>{
-  return await prismaClient.products.update({
+  let res = await prismaClient.products.update({
     where:{
       id_product:request.id_product
     },
@@ -37,11 +40,34 @@ const update =async (request)=>{
       brand_id: request.brand
     }
   })
+  return res;
+}
+
+const findName = async(name)=>{
+  let res = await prismaClient.products.count({
+    where:{
+      name:name
+    }
+  });
+  return res;
+}
+const findNameForUpdate = async(name,id)=>{
+  let res = await prismaClient.products.count({
+    where:{
+      name:name,
+      NOT:{
+        id_product:Number(id)
+      }
+    },
+  });
+  return res;
 }
 
 module.exports = {
   create,
   read,
   readId,
-  update
+  update,
+  findName,
+  findNameForUpdate
 }

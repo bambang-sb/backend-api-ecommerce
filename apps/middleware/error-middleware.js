@@ -1,3 +1,6 @@
+
+
+const { Prisma } = require("@prisma/client");
 const ResponseError = require("../errors/response-error");
 
 const errorMiddleware = (err, req, res, next) => {
@@ -7,6 +10,10 @@ const errorMiddleware = (err, req, res, next) => {
   if(err instanceof ResponseError){
     return res.status(err.status).json({
       message: err.message,
+    }).end();
+  }else if(err instanceof Prisma.PrismaClientKnownRequestError){
+    res.status(404).json({
+      message: err.meta.cause,
     }).end();
   }else{
     res.status(500).json({
