@@ -32,7 +32,7 @@ const login = async(request)=>{
     data:{
       token:token
     },
-    select:{token:true}
+    select:{id_user:true,token:true}
   });
 
   return user;

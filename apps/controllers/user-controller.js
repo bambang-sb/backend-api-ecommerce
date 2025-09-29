@@ -13,8 +13,9 @@ const register = asyncHandler(async (req, res) => {
 
 const login = asyncHandler(async (req, res) => {
   
-  let { token } = await userServices.login(req.body);
+  let { userId,token } = await userServices.login(req.body);
   res.status(200).json({
+    userId:userId,
     token: token,
     message: "User logged in successfully",
   });

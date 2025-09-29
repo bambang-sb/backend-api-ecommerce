@@ -36,8 +36,8 @@ const login = async (reqBody) => {
     throw new ResponseError(401, "Invalid username or password");
   }
 
-  let {token} = await User.login(login);
-  return { token: token };
+  let {id_user,token} = await User.login(login);
+  return { userId:id_user,token: token };
 };
 
 const logout = async ({username}) => {

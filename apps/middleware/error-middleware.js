@@ -15,6 +15,10 @@ const errorMiddleware = (err, req, res, next) => {
     res.status(404).json({
       message: err.meta.cause,
     }).end();
+  }else if(err instanceof Prisma.PrismaClientValidationError){
+    res.status(404).json({
+      message: err.message.split('\n').map(line => line.trim()).filter(line => line.length > 0),
+    }).end();
   }else{
     res.status(500).json({
       message: err.message,
