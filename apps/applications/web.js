@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const routes = require('../routes/route');
 const errorMiddleware = require('../middleware/error-middleware');
+const ResponseError = require('../errors/response-error');
 
 app.use(express.json())
 
@@ -9,8 +10,7 @@ app.use(express.json())
 app.use('/api', routes);  
 //not found 404
 app.use((req,res,next)=>{
-  let err = new Error("Not Found");
-  err.status = 404;
+  let err = new ResponseError(404,'Not Founded')
   next(err);
 })
 //error handler

@@ -1,16 +1,18 @@
 const prismaClient = require('../applications/database')
 
 const create =async (request)=>{
-  let res = await prismaClient.products.create({
-    data:{
+  await prismaClient.$transaction(async(tx)=>{
+    let pd = await tx.products.create({data:{
       name: request.name,
       price: request.price,
       description: request.description,
       categori_id: request.category,
       brand_id: request.brand
-    }
-  })
-  return res;
+    }})
+    await tx.inventory.create({data:{product_id:Number(pd.id_product),stock:0}});
+  });
+
+  return;
 }
 
 const read =async ()=>{

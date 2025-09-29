@@ -4,6 +4,7 @@ const categories = require('../controllers/categori-controller');
 const products = require('../controllers/product-controller');
 const brands = require('../controllers/brand-controller');
 const address = require('../controllers/address-controller');
+const inventory = require('../controllers/inventory-controller');
 const authMiddleware = require('../middleware/auth-middleware');
 
 //users
@@ -38,7 +39,10 @@ r.post('/brands',brands.create)
 r.put('/brands/:id',brands.update)
 
 //stock
-// r.post('/stocks',)
+r.get('/inventorys',inventory.read)
+r.get('/inventorys/:id',inventory.readId)
+r.put('/inventorys/:id',inventory.updatePlus)
+
 r.get('/test', (req, res) => {
   res.json('API is running....');
 });
