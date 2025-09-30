@@ -35,7 +35,7 @@ const createCartItem = async(req,id_cart)=>{
 }
 
 const readId = async(id_user)=>{
-  let data = await prismaClient.cartItems.findFirst({
+  let data = await prismaClient.cartItems.findMany({
     include:{
       carts:{
         select:{
