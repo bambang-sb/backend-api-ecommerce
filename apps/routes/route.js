@@ -5,6 +5,7 @@ const products = require('../controllers/product-controller');
 const brands = require('../controllers/brand-controller');
 const address = require('../controllers/address-controller');
 const inventory = require('../controllers/inventory-controller');
+const cart = require('../controllers/cart-controller');
 const authMiddleware = require('../middleware/auth-middleware');
 
 //users
@@ -42,6 +43,11 @@ r.put('/brands/:id',brands.update)
 r.get('/inventorys',inventory.read)
 r.get('/inventorys/:id',inventory.readId)
 r.put('/inventorys/:id',inventory.updatePlus)
+
+//cart
+r.get('/carts',cart.readId)
+r.post('/carts',cart.create)
+r.put('/cart/:id',cart.updateCartItem)
 
 r.get('/test', (req, res) => {
   res.json('API is running....');

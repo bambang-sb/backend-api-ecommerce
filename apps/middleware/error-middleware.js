@@ -7,6 +7,11 @@ const errorMiddleware = (err, req, res, next) => {
 
   if(!err) return next();
 
+  if(err.code){
+    let val = prismaError(err.code);
+    return res.status(val.status).json({message:val.message});
+  }
+
   if(err instanceof ResponseError){
     return res.status(err.status).json({
       message: err.message,
@@ -26,6 +31,13 @@ const errorMiddleware = (err, req, res, next) => {
   }
 };
 
-
+const prismaError = (code)=>{
+  let st,ms;
+  if(code == 'P2003'){
+    st=400;
+    ms="Product not found"
+  }
+  return{status:st,message:ms}
+}
 
 module.exports = errorMiddleware;

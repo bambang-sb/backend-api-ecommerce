@@ -9,14 +9,14 @@ const authMiddleware = async (req, res, next) => {
   try {
     //cek mode
     if(process.env.NODE_ENV === 'development'){
-      req.user = {username:'test',token:'test'} // Attach user info to request object
+      req.user = {id_user:265,username:'test',token:'test'} // Attach user info to request object
       next();
 
     }else{
       // Assuming you have a function to verify the token and get user info
       const user = await prisma.users.findFirst({
         where: { token: req.headers.authorization },
-        select: { username: true,token:true }
+        select: {id_user:true, username: true,token:true }
       });
       if (!user) {
         return res.status(401).json({ message: "Unauthorized" });
