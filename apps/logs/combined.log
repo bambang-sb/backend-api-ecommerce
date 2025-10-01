@@ -2912,3 +2912,155 @@ info: Params: []
 {"level":"error","message":"Error: \nInvalid `prismaClient.cartItems.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/apps/models/cart-model.js:27:32\n\n  24 \n  25 //create cart item only, because have cart\n  26 const createCartItem = async(req,id_cart)=>{\n→ 27   await prismaClient.cartItems.create(\nForeign key constraint violated on the fields: (`product_id`)"}
 {"level":"info","message":"Server is running on port 3000"}
 {"level":"error","message":"Error: \nInvalid `prismaClient.cartItems.create()` invocation in\n/home/bambang-sb/prog/express/ecommerce/backend/apps/models/cart-model.js:27:32\n\n  24 \n  25 //create cart item only, because have cart\n  26 const createCartItem = async(req,id_cart)=>{\n→ 27   await prismaClient.cartItems.create(\nForeign key constraint violated on the fields: (`product_id`)"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect...object"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connect..."}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"MongoDB connected"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}
+{"level":"info","message":"Server is running on port 3000"}

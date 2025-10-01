@@ -3,7 +3,8 @@ const ResponseError = require("../errors/response-error")
 const validate =(schema,request)=>{
   const {error,value} = schema.validate(request,{
     abortEarly:false,
-    allowUnknown:false
+    allowUnknown:false,
+    convert:false
   })
 
   if(error){

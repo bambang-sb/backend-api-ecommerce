@@ -4,6 +4,9 @@ const routes = require('../routes/route');
 const errorMiddleware = require('../middleware/error-middleware');
 const ResponseError = require('../errors/response-error');
 
+//mongodb
+let mongo = require('./mongodb');
+mongo;
 app.use(express.json())
 
 //routes
