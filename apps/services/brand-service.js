@@ -12,7 +12,7 @@ const read = async () => {
 };
 
 const readId = async (reqParam) => {
-  let brand = validate(brandIdValidation, {id:reqParam.id});
+  let brand = validate(brandIdValidation, {id:Number(reqParam.id)});
   let res = await Brand.readId(brand.id);
   return res;
 };
@@ -36,7 +36,7 @@ const create = async (req) => {
 
 const update = async (reqBody,{id}) => {
   let brand = validate(brandCreateUpdateValidation, reqBody);
-  let brandId = validate(brandIdValidation, {id:id});
+  let brandId = validate(brandIdValidation, {id:Number(id)});
 
   let cek = await Brand.findNameForUpdate(brand.name,id);
   if(cek > 0){

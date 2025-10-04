@@ -11,7 +11,7 @@ const read = async () => {
 };
 
 const readId = async (reqParam) => {
-  let categori = validate(categoriIdValidation, {id:reqParam.id});
+  let categori = validate(categoriIdValidation, {id:Number(reqParam.id)});
   
   let category = await Category.readId(categori.id);
   return category;
@@ -35,7 +35,7 @@ const create = async (request) => {
 
 const update = async (reqBody,{id}) => {
   let categori = validate(categoryCreateUpdateValidation, reqBody);
-  let categoriId = validate(categoriIdValidation, {id:id});
+  let categoriId = validate(categoriIdValidation, {id:Number(id)});
 
   const cek = await Category.findNameForUpdate(categori.name,id);
   if(cek > 0){

@@ -12,7 +12,7 @@ const read = async () => {
 };
 
 const readId = async ({id}) => {
-  let product = validate(ProductIdValidation, {id:id});
+  let product = validate(ProductIdValidation, {id:Number(id)});
   
   let res = await Product.readId(product.id);
   return res;
@@ -40,7 +40,7 @@ const create = async (req) => {
 
 const update = async (req,{id}) => {
   let product = validate(ProductCreateUpdateValidation, req);
-  let productId = validate(ProductIdValidation, {id:id});
+  let productId = validate(ProductIdValidation, {id:Number(id)});
 
   const cek = await Product.findNameForUpdate(product.name,id);
     if(cek > 0){
