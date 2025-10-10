@@ -16,7 +16,24 @@ const create =async (request)=>{
 }
 
 const read =async ()=>{
-  let res = await prismaClient.products.findMany();
+  let res = await prismaClient.products.findMany({
+    select:{
+      id_product:true,
+      name:true,
+      description:true,
+      price:true,
+      categories:{
+        select:{
+          name:true
+        }
+      },
+      brands:{
+        select:{
+          name:true
+        }
+      }
+    },
+  });
   return res;
 }
 

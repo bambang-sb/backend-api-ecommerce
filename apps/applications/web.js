@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const routes = require('../routes/route');
 const errorMiddleware = require('../middleware/error-middleware');
 const ResponseError = require('../errors/response-error');
@@ -7,6 +8,13 @@ const ResponseError = require('../errors/response-error');
 //mongodb
 let mongo = require('./mongodb');
 mongo;
+
+app.use(cors({
+  origin: ['http://localhost:3001'],  // Dev + Prod
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed methods
+  credentials: false, // If using cookies/auth
+  allowedHeaders:['Content-Type','Authorization']
+}));
 app.use(express.json())
 
 //routes
