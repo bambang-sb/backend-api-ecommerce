@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const path = require('path');
 const routes = require('../routes/route');
 const errorMiddleware = require('../middleware/error-middleware');
 const ResponseError = require('../errors/response-error');
@@ -16,6 +17,9 @@ app.use(cors({
   allowedHeaders:['Content-Type','Authorization']
 }));
 app.use(express.json())
+
+//upload
+app.use('/uploads', express.static(path.join(__dirname, '../../uploads')));
 
 //routes
 app.use('/api', routes);  
