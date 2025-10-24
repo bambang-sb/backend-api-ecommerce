@@ -28,12 +28,12 @@ const errorMiddleware = (err, req, res, next) => {
       let val = prismaError(err.code);
       return res.status(val.status).json({message:val.message});
     }else{
-      res.status(404).json({
+      res.status(400).json({
         message: err.meta.cause,
       }).end();
     }
   }else if(err instanceof Prisma.PrismaClientValidationError){//prisma error
-    res.status(404).json({
+    res.status(400).json({
       message: err.message.split('\n').map(line => line.trim()).filter(line => line.length > 0),
     }).end();
   }else{
@@ -44,10 +44,11 @@ const errorMiddleware = (err, req, res, next) => {
 };
 
 const prismaError = (code)=>{
-  let st,ms;
+  let st=400,ms='prisma something wrong';
   if(code == 'P2003'){
     st=400;
     ms="Product not found"
+    return{status:st,message:ms}
   }
   return{status:st,message:ms}
 }

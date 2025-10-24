@@ -15,7 +15,7 @@ const register =async (reqBody) => {
      
     const userExists = await User.findUsername({ username });
     if (userExists) {
-      throw new ResponseError(400,"User already exists");
+      throw new ResponseError(409,"User already exists");
     }
     //save register
     await User.register(users);
@@ -28,12 +28,12 @@ const login = async (reqBody) => {
 
   const user = await User.findUsername({username:login.username});
   if (!user) {
-    throw new ResponseError(401, "Invalid username or password");
+    throw new ResponseError(400, "Invalid username or password");
   }
 
   const isPassValid = await bcrypt.compare(login.password, user.password);
   if (!isPassValid) {
-    throw new ResponseError(401, "Invalid username or password");
+    throw new ResponseError(400, "Invalid username or password");
   }
 
   let {id_user,token} = await User.login(login);
@@ -46,7 +46,7 @@ const logout = async ({username}) => {
 
   const user = await User.findUsername({username:userValid.username});
   if (!user) {
-    throw new ResponseError(401, "User not found");
+    throw new ResponseError(404, "User not found");
   }
 
   await User.logout(userValid);

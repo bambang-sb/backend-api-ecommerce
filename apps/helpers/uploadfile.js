@@ -33,7 +33,7 @@ const deleteOldImage = (fileImage)=>{
     fs.unlinkSync(filePath+'/'+fileImage);
     return true;
   }
-  throw new ResponseError(404,'File not exist in system!!');
+  throw new ResponseError(404,'Old File not exist in system!!');
   
 }
 module.exports = {upload,deleteOldImage};
