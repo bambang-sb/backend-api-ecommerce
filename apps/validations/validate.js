@@ -11,7 +11,7 @@ const validate =(schema,request)=>{
     let ers={}
     error.details.forEach(e=>{
       const key = e.path.join('.');
-      ers[key] = e.message
+      ers[key] = e.message.replace(/["\\]/g,'');
     })
     throw new ResponseError(400,ers)
   }else{

@@ -8,6 +8,7 @@ const read = asyncHandler(async (req, res) => {
 
 const readId = asyncHandler(async (req, res) => {
   let result = await productService.readId(req.params);
+  if(result == null) return res.status(404).json({data:result});
   res.status(200).json({data:result});
 });
 

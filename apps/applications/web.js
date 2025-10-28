@@ -11,7 +11,7 @@ let mongo = require('./mongodb');
 mongo;
 
 app.use(cors({
-  origin: ['http://localhost:3001'],  // Dev + Prod
+  origin: ['http://localhost:3001','http://localhost:3002','https://ecommerce.apidog.io'],  // Dev + Prod
   methods: ['GET', 'POST', 'PUT', 'DELETE'],  // Allowed methods
   credentials: false, // If using cookies/auth
   allowedHeaders:['Content-Type','Authorization']

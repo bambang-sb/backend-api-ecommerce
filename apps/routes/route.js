@@ -15,6 +15,12 @@ const authMiddleware = require('../middleware/auth-middleware');
 r.post('/users', users.register);
 r.post('/users/login', users.login);
 
+//global
+r.get('/categories',categories.read)
+r.get('/products',products.read)
+r.get('/products/:id',products.readId)
+r.get('/brands',brands.read)
+
 //middleware
 r.use(authMiddleware)
 r.delete('/users', users.logout);
@@ -25,14 +31,14 @@ r.post('/users/address/:id',address.create);
 r.put('/users/address/:id',address.update);
 
 //categories
-r.get('/categories',categories.read)
+
 r.get('/categories/:id',categories.readId)
 r.post('/categories',categories.create)
 r.put('/categories/:id',categories.update)
 
 //products
-r.get('/products',products.read)
-r.get('/products/:id',products.readId)
+
+
 r.post('/products',products.create)
 r.put('/products/:id',products.update)
 
@@ -45,7 +51,7 @@ r.put('/product-image/active/:id',productImage.activeImage)
 r.delete('/product-image/:id',productImage.imageDelete)
 
 //brands
-r.get('/brands',brands.read)
+
 r.get('/brands/:id',brands.readId)
 r.post('/brands',brands.create)
 r.put('/brands/:id',brands.update)

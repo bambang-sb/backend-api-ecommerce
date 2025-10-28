@@ -25,7 +25,7 @@ const errorMiddleware = (err, req, res, next) => {
   }
   else if(err instanceof Prisma.PrismaClientKnownRequestError){//prisma error
     if(err.code){
-      let val = prismaError(err.code);
+      let val = prismaError(err);
       return res.status(val.status).json({message:val.message});
     }else{
       res.status(400).json({
@@ -43,14 +43,17 @@ const errorMiddleware = (err, req, res, next) => {
   }
 };
 
-const prismaError = (code)=>{
-  let st=400,ms='prisma something wrong';
-  if(code == 'P2003'){
+const prismaError = (err)=>{
+  let st=400,ms='prisma somethong wrong';
+  if(err.code == 'P2003'){
     st=400;
-    ms="Product not found"
+    return{status:st,message:err.message}
+  }else if(err.code == 'P2025'){
+    st=404;
+    return{status:st,message:err.meta.cause}
+  }else{
     return{status:st,message:ms}
   }
-  return{status:st,message:ms}
 }
 
 module.exports = errorMiddleware;

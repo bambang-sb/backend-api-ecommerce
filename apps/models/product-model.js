@@ -31,6 +31,12 @@ const read =async ()=>{
         select:{
           name:true
         }
+      },
+      productImages:{
+        
+        select:{
+          image_url:true
+        }
       }
     },
   });
@@ -41,7 +47,29 @@ const readId =async (id)=>{
   let res = await prismaClient.products.findFirst({
     where:{
       id_product:id
-    }
+    },
+    select:{
+      id_product:true,
+      name:true,
+      description:true,
+      price:true,
+      categories:{
+        select:{
+          name:true
+        }
+      },
+      brands:{
+        select:{
+          name:true
+        }
+      },
+      productImages:{
+        
+        select:{
+          image_url:true
+        }
+      }
+    },
   })
   return res;
 }
