@@ -9,6 +9,15 @@ const create = asyncHandler(async(req,res)=>{
   });
 });
 
+const readId = asyncHandler(async(req,res)=>{
+  let result = await OrderService.readId(req.user.id_user)
+
+  res.status(200).json({
+    data:result
+  });
+})
+
 module.exports = {
-  create
+  create,
+  readId
 }

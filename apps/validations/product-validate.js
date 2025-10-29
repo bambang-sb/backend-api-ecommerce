@@ -38,7 +38,17 @@ const ProductIdValidation = Joi.object({
   }),
 });
 
+const ProductCategoriIdValidation = Joi.object({
+  id: Joi.number().integer().positive().required().messages({
+    'any.required': 'Category ID is required',
+    'number.base': 'Category ID must be a number',
+    'number.integer': 'Category ID must be an integer',
+    'number.positive': 'Category ID must be a positive number',
+  }),
+});
+
 module.exports = {
   ProductCreateUpdateValidation,
-  ProductIdValidation
+  ProductIdValidation,
+  ProductCategoriIdValidation
 }; 

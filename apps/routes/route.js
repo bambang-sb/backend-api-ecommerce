@@ -15,11 +15,14 @@ const authMiddleware = require('../middleware/auth-middleware');
 r.post('/users', users.register);
 r.post('/users/login', users.login);
 
-//global
+//global no auth
 r.get('/categories',categories.read)
 r.get('/products',products.read)
 r.get('/products/:id',products.readId)
 r.get('/brands',brands.read)
+
+//from frontend-app
+r.get("/products/categories/:id",products.productByCategori)
 
 //middleware
 r.use(authMiddleware)
@@ -67,6 +70,7 @@ r.post('/carts',cart.create)
 r.put('/cart/:id',cart.updateCartItem)
 
 //order
+r.get('/order',order.readId)
 r.post('/order',order.create)
 
 r.get('/test', (req, res) => {

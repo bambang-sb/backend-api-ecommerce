@@ -22,9 +22,15 @@ const update = asyncHandler(async (req, res) => {
   res.status(200).json({message:"Product updated successfully"});
 });
 
+const productByCategori = asyncHandler(async(req,res)=>{
+  let result = await productService.findByCategoriID(req.params);
+  if(result.length == 0) return res.status(404).json({data:result});
+  res.status(200).json({data:result});
+})
 module.exports = {
   read,
   readId,
   create,
-  update
+  update,
+  productByCategori
 }

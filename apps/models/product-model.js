@@ -110,11 +110,43 @@ const findNameForUpdate = async(name,id)=>{
   return res;
 }
 
+const findByCategoriID = async(id)=>{
+  let res = await prismaClient.products.findMany({
+    where:{
+      categori_id:id
+    },
+    select:{
+      id_product:true,
+      name:true,
+      description:true,
+      price:true,
+      categories:{
+        select:{
+          name:true
+        }
+      },
+      brands:{
+        select:{
+          name:true
+        }
+      },
+      productImages:{
+        
+        select:{
+          image_url:true
+        }
+      }
+    },
+  });
+  return res;
+}
+
 module.exports = {
   create,
   read,
   readId,
   update,
   findName,
-  findNameForUpdate
+  findNameForUpdate,
+  findByCategoriID
 }

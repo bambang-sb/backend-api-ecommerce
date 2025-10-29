@@ -15,7 +15,7 @@ const createOrder = async(req,id_user)=>{
 
   let subTotal=0,totalAmount=valid.total_amount;
   let orderStatus="pending";
-  let ord={};
+  // let ord={};
   let products=[];
   for(let res of dataCart ){
 
@@ -39,11 +39,22 @@ const createOrder = async(req,id_user)=>{
     dataProduct:products,
     sub_total:subTotal
   };
-  let re = await Order.create(data)
-  
-  return data
+  let create_order = await Order.create(data)
+
+  if(create_order){
+    await Cart.deleteCartAndItems(dataCart[0].cart_id)
+  }
+  // return data
+  return true
+}
+
+const readId = async(id_user)=>{
+  let res = Order.readId(Number(id_user));
+
+  return res;
 }
 
 module.exports = {
-  createOrder
+  createOrder,
+  readId
 }

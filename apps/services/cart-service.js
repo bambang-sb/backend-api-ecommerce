@@ -11,21 +11,22 @@ const create = async(req,id_user)=>{
   let cek = await Cart.cekCart(Number(id_user));
   
   //cart not empty
-  if(cek.length > 0){
+  if(cek != null){
     //cek cart item
-    let cekItem = await Cart.cekCartItem(req.id_product);
-
+    let cekItem = await Cart.cekCartItem(Number(cek.id_cart),Number(req.id_product));
+    
     //cek cart item not empty
-    if(cekItem.length > 0){
-      await Cart.updateCartItem(valid,cekItem[0].id_cart_item);
+    if(cekItem != null){
+      await Cart.updateCartItem(valid,cekItem.id_cart_item);
     }
     //cart item empty
     else{
-      await Cart.createCartItem(valid,cek[0].id_cart);
+      await Cart.createCartItem(valid,cek.id_cart);
     }
   }
   //cart empty
   else{
+    //create cart and cart item
     await Cart.createAll(valid,Number(id_user));
   }
   

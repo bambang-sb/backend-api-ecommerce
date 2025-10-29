@@ -12,6 +12,17 @@ const authMiddleware = async (req, res, next) => {
       req.user = {id_user:265,username:'test',token:'test'} // Attach user info to request object
       next();
 
+    }else if(process.env.NODE_ENV === 'testing'){
+      const user = await prisma.users.findFirst({
+        where: {token: req.headers.authorization },
+        select: {id_user:true, username: true,token:true }
+      });
+      if (!user) {
+        return res.status(401).json({ message: "Unauthorized" });
+      }
+  
+      req.user = user; // Attach user info to request object
+      next();
     }else{
       // Assuming you have a function to verify the token and get user info
       const user = await prisma.users.findFirst({
@@ -19,7 +30,7 @@ const authMiddleware = async (req, res, next) => {
         select: {id_user:true, username: true,token:true }
       });
       if (!user) {
-        return res.status(401).json({ message: "Unauthorized" });
+        return res.status(401).json({ message: "Unauthorized2" });
       }
   
       req.user = user; // Attach user info to request object

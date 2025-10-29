@@ -39,7 +39,8 @@ const readId = async(id_user)=>{
     include:{
       carts:{
         select:{
-          user_id:id_user
+          user_id:true,
+          id_cart:true
         }
       },
       products:{
@@ -101,7 +102,7 @@ const deleteAfterOrder = async(id_cart)=>{
 }
 
 const cekCart = async(id_user)=>{
-  let data = await prismaClient.carts.findMany({
+  let data = await prismaClient.carts.findFirst({
     where:{
       user_id:id_user
     },
@@ -112,9 +113,10 @@ const cekCart = async(id_user)=>{
   return data;
 }
 
-const cekCartItem = async(id_product)=>{
-  let data = await prismaClient.cartItems.findMany({
+const cekCartItem = async(id_cart,id_product)=>{
+  let data = await prismaClient.cartItems.findFirst({
     where:{
+      cart_id:id_cart,
       product_id:id_product
     },
     select:{
@@ -124,6 +126,23 @@ const cekCartItem = async(id_product)=>{
   return data;
 }
 
+const deleteCartAndItems = async (id_cart)=>{
+  await prismaClient.$transaction(async(tx)=>{
+    await tx.cartItems.deleteMany({
+      where:{
+        cart_id:id_cart
+      }
+    });
+
+    await tx.carts.delete({
+      where:{
+        id_cart:id_cart
+      }
+    });
+
+    return true;
+  })
+}
 
 module.exports = {
   createAll,
@@ -132,5 +151,6 @@ module.exports = {
   updateCartItem,
   deleteAfterOrder,
   cekCart,
-  cekCartItem
+  cekCartItem,
+  deleteCartAndItems
 }

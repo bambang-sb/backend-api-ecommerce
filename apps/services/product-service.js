@@ -2,7 +2,8 @@ const ResponseError = require("../errors/response-error");
 const Product = require("../models/product-model");
 const {
   ProductCreateUpdateValidation,
-  ProductIdValidation
+  ProductIdValidation,
+  ProductCategoriIdValidation
 } = require("../validations/product-validate");
 const validate = require("../validations/validate");
 
@@ -61,9 +62,18 @@ const update = async (req,{id}) => {
   return;
 };
 
+const findByCategoriID = async({id})=>{
+  let valid = validate(ProductCategoriIdValidation,{id:Number(id)});
+
+  let res = await Product.findByCategoriID(valid.id);
+  
+  return res;
+}
+
 module.exports = {
   read,
   readId,
   create,
-  update
+  update,
+  findByCategoriID
 };
