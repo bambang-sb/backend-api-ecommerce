@@ -1,31 +1,37 @@
 const asyncHandler = require("../helpers/asyncHandler");
 const productService = require("../services/product-service");
+const {successResponse,createdResponse,updatedResponse,errorResponse} = require("../helpers/response");
 
 const read = asyncHandler(async (req, res) => {
   let product = await productService.read();
-  res.status(200).json({data:product});
+  
+  return successResponse(res,product);
 });
 
 const readId = asyncHandler(async (req, res) => {
   let result = await productService.readId(req.params);
-  if(result == null) return res.status(404).json({data:result});
-  res.status(200).json({data:result});
+  if(result == null) return errorResponse(res,'not found!');
+  
+  return successResponse(res,result);
 });
 
 const create = asyncHandler(async (req, res) => {
   await productService.create(req.body);
-  res.status(201).json({message:"Product created successfully"});
+  
+  return createdResponse(res);
 });
 
 const update = asyncHandler(async (req, res) => {
   await productService.update(req.body, req.params);
-  res.status(200).json({message:"Product updated successfully"});
+  
+  return updatedResponse(res);
 });
 
 const productByCategori = asyncHandler(async(req,res)=>{
   let result = await productService.findByCategoriID(req.params);
-  if(result.length == 0) return res.status(404).json({data:result});
-  res.status(200).json({data:result});
+  if(result.length == 0) return errorResponse(res,'Not found!',404);
+  
+  return successResponse(res,result);
 })
 module.exports = {
   read,

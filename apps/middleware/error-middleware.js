@@ -2,44 +2,39 @@
 const multer = require('multer')
 const { Prisma } = require("@prisma/client");
 const ResponseError = require("../errors/response-error");
+const {errorResponse} = require('../helpers/response');
 
 const errorMiddleware = (err, req, res, next) => {
 
   if(!err) return next();
   
   if(err instanceof ResponseError){
-    return res.status(err.status).json({
-      message: err.message,
-    }).end();
+    return errorResponse(res,err.message,err.status);
   }
   else if(err instanceof multer.MulterError){//multer error file upload limit
     if(err.code === 'LIMIT_UNEXPECTED_FILE'){
-      res.status(400).json({
-        message: 'max upload 3 file',
-      }).end();
+      return errorResponse(res,'max upload 3 file',400);
     }else{
-      res.status(400).json({
-        message: 'something upload file error',
-      }).end();
+      return errorResponse(res,'something upload file error',400);
+      
     }
   }
   else if(err instanceof Prisma.PrismaClientKnownRequestError){//prisma error
     if(err.code){
       let val = prismaError(err);
-      return res.status(val.status).json({message:val.message});
+      return errorResponse(res,val.message,val.status);
     }else{
-      res.status(400).json({
-        message: err.meta.cause,
-      }).end();
+      return errorResponse(res,err.meta.cause,400);
     }
   }else if(err instanceof Prisma.PrismaClientValidationError){//prisma error
-    res.status(400).json({
-      message: err.message.split('\n').map(line => line.trim()).filter(line => line.length > 0),
-    }).end();
+    
+    return errorResponse(
+      res,
+      err.message.split('\n').map(line => line.trim()).filter(line => line.length > 0),
+      400
+    );
   }else{
-    res.status(500).json({
-      message: err.message,
-    }).end();
+    errorResponse(res,err.message,500);
   }
 };
 

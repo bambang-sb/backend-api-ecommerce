@@ -1,10 +1,11 @@
 const prisma = require("../applications/database");
 // require('dotenv').config()
+const {errorResponse} = require('../helpers/response');
 
 const authMiddleware = async (req, res, next) => {
   const token = req.headers.authorization
   if (!token) {
-    return res.status(401).json({ message: "Unauthorized" });
+    return errorResponse(res,'Unauthorized',401);
   }
 
   try {
@@ -19,7 +20,7 @@ const authMiddleware = async (req, res, next) => {
         select: {id_user:true, username: true,token:true }
       });
       if (!user) {
-        return res.status(401).json({ message: "Unauthorized" });
+        return errorResponse(res,'Unauthorized',401);
       }
   
       req.user = user; // Attach user info to request object
@@ -31,7 +32,7 @@ const authMiddleware = async (req, res, next) => {
         select: {id_user:true, username: true,token:true }
       });
       if (!user) {
-        return res.status(401).json({ message: "Unauthorized2" });
+        return errorResponse(res,'Unauthorized',401);
       }
   
       req.user = user; // Attach user info to request object

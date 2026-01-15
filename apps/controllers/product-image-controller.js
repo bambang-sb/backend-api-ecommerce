@@ -1,61 +1,52 @@
 const asyncHandler = require('../helpers/asyncHandler');
 const productImageService = require('../services/product-image-service');
-const path = require('path');
+
+const {successResponse,createdResponse,updatedResponse, errorResponse} = require("../helpers/response");
 
 const read = asyncHandler(async(req,res)=>{
   let result = await productImageService.read();
-  res.status(200).json({
-    data:result
-  });
+  
+  return successResponse(res,result);
 });
 
 const readId = asyncHandler(async(req,res)=>{
   let result = await productImageService.readId(req.params);
-  res.status(200).json({
-    data:result
-  });
+
+  return successResponse(res,result);
 });
 
 const create = asyncHandler(async(req,res)=>{
   
   if(!req.files){
-    return res.status(400).json({
-      message:'file not choise.!!'
-    })
+    return errorResponse(res,'file not choice!',400);
   }
   await productImageService.create({product_id:Number(req.body.product_id)},req.files);
-  res.status(200).json({
-    message:'image success upload...'
-  });
+  
+  return createdResponse(res);
 });
 
 const update = asyncHandler(async(req,res)=>{
   if(!req.file){
-    return res.status(400).json({
-      message:'file not choise.!!'
-    })
+    return errorResponse(res,'file not choice!',400);
   }
 
   await productImageService.update(req.params,req.file,req.body)
-  res.status(200).json({
-    message:'Update image success...',
-  });
+
+  return updatedResponse(res);
 })
 
 const activeImage = asyncHandler(async(req,res)=>{
   
   await productImageService.activeImage(req.params)
-  res.status(200).json({
-    message:'Update active image success...'
-  });
+  
+  return updatedResponse(res)
 })
 
 const imageDelete = asyncHandler(async(req,res)=>{
 
   await productImageService.imageDelete(req.params,req.body);
-  res.status(200).json({
-    message:'delete image success...',
-  });
+  
+  return updatedResponse(res)
 })
 
 module.exports = {

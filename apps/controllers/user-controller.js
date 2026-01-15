@@ -1,33 +1,29 @@
 const asyncHandler = require("../helpers/asyncHandler");
 const userServices = require("../services/user-service");
+const {successResponse,createdResponse,updatedResponse} = require("../helpers/response");
 
 const register = asyncHandler(async (req, res) => {
   
   await userServices.register(req.body);
 
-  res.status(201).json({
-    message: "User created successfully",
-  });
-  
+  return createdResponse(res);
 });
 
 const login = asyncHandler(async (req, res) => {
   
   let { userId,token } = await userServices.login(req.body);
-  res.status(200).json({
+  const data = {
     userId:userId,
-    token: token,
-    message: "User logged in successfully",
-  });
+    token: token
+  }
+  return successResponse(res,data);
 });
 
 const logout = asyncHandler(async (req, res) => {
 
   await userServices.logout(req.user);
 
-  res.status(200).json({
-    message: "User logged out successfully",
-  });
+  return updatedResponse(res);
 });
 
 module.exports = {
