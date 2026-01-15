@@ -2,7 +2,8 @@ const prisma = require("../applications/database");
 // require('dotenv').config()
 
 const authMiddleware = async (req, res, next) => {
-  if (!req.headers.authorization) {
+  const token = req.headers.authorization
+  if (!token) {
     return res.status(401).json({ message: "Unauthorized" });
   }
 
@@ -14,7 +15,7 @@ const authMiddleware = async (req, res, next) => {
 
     }else if(process.env.NODE_ENV === 'testing'){
       const user = await prisma.users.findFirst({
-        where: {token: req.headers.authorization },
+        where: {token: token },
         select: {id_user:true, username: true,token:true }
       });
       if (!user) {
@@ -26,7 +27,7 @@ const authMiddleware = async (req, res, next) => {
     }else{
       // Assuming you have a function to verify the token and get user info
       const user = await prisma.users.findFirst({
-        where: { token: req.headers.authorization },
+        where: { token: token },
         select: {id_user:true, username: true,token:true }
       });
       if (!user) {
