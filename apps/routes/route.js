@@ -40,8 +40,6 @@ r.post('/categories',categories.create)
 r.put('/categories/:id',categories.update)
 
 //products
-
-
 r.post('/products',products.create)
 r.put('/products/:id',products.update)
 
