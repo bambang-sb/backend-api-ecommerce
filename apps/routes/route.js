@@ -34,7 +34,6 @@ r.post('/users/address/:id',address.create);
 r.put('/users/address/:id',address.update);
 
 //categories
-
 r.get('/categories/:id',categories.readId)
 r.post('/categories',categories.create)
 r.put('/categories/:id',categories.update)
